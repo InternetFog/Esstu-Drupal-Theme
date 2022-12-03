@@ -1,0 +1,499 @@
+/* ----------------------------------------- Блок доп. информации ---------------------------------------- */
+.additional-data-block {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	max-width: var(--max-width-content-block);
+	padding: 30px 0;
+}
+
+.additional-data-block {
+	display: flex;
+	align-items: center;
+}
+
+.history-brash-item {
+	color: var(--color-esstu-cyan-dark);
+	font-size: var(--font-size-content-big);
+	transition: 100ms;
+}
+
+a.history-brash-item {
+	padding: 5px 15px 4px 15px;
+	border-radius: 5px;
+	background: var(--color-esstu-cyan-light-d);
+	text-decoration: none;
+}
+
+a.history-brash-item:active {
+	background: var(--color-esstu-cyan-light-c);
+}
+
+.history-brash-item:not(:first-child)::before {
+	content: "/";
+	padding: 0 5px;
+}
+
+.date-download {
+	color: var(--color-gray-9);
+	font-size: var(--font-size-content);
+}
+
+/* ----------------------------------------- Доски с расписанием ---------------------------------------- */
+
+/* ---------- Общие стили досок ------------ */
+
+.time-table-wrapper {
+	display: flex;
+	width: 100%;
+	height: calc(100vh - 195px);
+	min-height: 300px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto 45px auto;
+	max-width: var(--max-width-content-block);
+}
+
+.time-table-block {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	border-radius: 9px;
+	border: 1px solid var(--color-gray-c);
+}
+
+.time-table-block:first-of-type {
+	margin-right: 30px;
+}
+
+.time-table-window {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: var(--color-white);
+	border-radius: 10px;
+}
+
+.time-table-block iframe {
+	border-radius: 8px;
+	border: 2px solid var(--color-gray-c);
+}
+
+.time-table-heading-block {
+	position: relative;
+	background: var(--color-esstu-cyan);
+	padding: 15px;
+	border-radius: 8px 8px 0 0;
+}
+
+.time-table-heading {
+	text-align: center;
+	color: var(--color-white);
+	font-size: var(--font-size-heading);
+}
+
+.time-table-heading-btn {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 36px;
+	height: 36px;
+}
+
+.time-table-heading-btn svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 24px;
+	transition: 150ms;
+}
+
+.time-table-heading-btn.is-multiply:hover svg {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+.time-table-heading-btn svg path {
+	fill: var(--color-white);
+}
+
+.time-table-content-block {
+	height: calc(100% - var(--font-size-heading) - 35px);
+	overflow: auto;
+	position: relative;
+}
+
+/* ---------- Главное меню Расписания ------------ */
+
+.time-table-main-menu {
+	max-width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.time-table-main-menu .time-table-main-menu_descr {
+	display: block;
+	color: var(--color-esstu-cyan);
+	font-size: var(--font-size-content);
+	margin-bottom: 10px;	
+}
+
+.time-table-main-menu_btn {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 10px;
+	margin-bottom: 10px;
+	font-size: var(--font-size-content);
+	font-weight: 600;
+	color: var(--color-esstu-cyan);
+	border-radius: 8px;
+	border: 2px solid var(--color-esstu-cyan);
+	transition: 100ms;
+}
+
+.time-table-main-menu_btn.filled {
+	color: var(--color-white);
+	background: var(--color-esstu-cyan);
+}
+
+/* --------------- Форма поиска по расписанию -------------- */
+.time-table-search-block {
+	margin: 30px 25px;
+	display: flex;
+	align-items: center;
+	border: 2px solid var(--color-esstu-cyan-light-c);
+	border-radius: 5px;
+}
+
+.time-table-search-input:focus {
+	outline: none;
+	border-color: var(--color-esstu-cyan);
+}
+
+.time-table-search-input {
+	box-sizing: border-box;
+	padding: 10px 15px;
+	width: calc(100% - 36px);
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	color: var(--color-esstu-cyan-dark);
+}
+
+.time-table-search-input::placeholder {
+	color: var(--color-esstu-cyan-grey);
+	opacity: 0.8;
+}
+
+.time-table-search-input:focus::placeholder {
+	opacity: 1;
+}
+
+.time-table-search-btn {
+	cursor: pointer;
+	position: relative;
+	width: 36px;
+	height: 36px;
+}
+
+.time-table-search-btn svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+}
+
+.time-table-search-btn svg path {
+	fill: var(--color-esstu-cyan-grey);
+}
+
+.time-table-search-btn:active svg path {
+	fill: var(--color-esstu-cyan);
+}
+
+
+/* --------------- Чекбоксы расписаня -------------- */
+.time-table-radio-box-block {
+	display: flex;
+	align-items: center;
+	padding: 0 25px;
+}
+
+.time-table-radio-box_heading {
+	color: var(--color-esstu-cyan);
+	font-size: var(--font-size-content-big);
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.time-table-radio-box {
+	display: flex;
+	margin-left: 15px;
+	border: 2px solid var(--color-esstu-cyan);
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+.time-table-radio-box-item {
+	cursor: pointer;
+	position: relative;
+	width: 37px;
+	height: 35px;
+	margin-left: -2px;
+	color: var(--color-black);
+}
+
+.time-table-radio-box-item.checked:first-child {
+	border-radius: 5px 0 0 5px;
+}
+
+
+.time-table-radio-box-item.checked:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
+.time-table-radio-box-item.checked {
+	color: var(--color-white);
+	background: var(--color-esstu-cyan);
+}
+
+.time-table-radio-box-item:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	height: 30px;
+	border-left: 2px solid var(--color-esstu-cyan);
+}
+
+.time-table-radio-box-item span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+/* --------------- Списки расписаня -------------- */
+.time-table-list-block {
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+
+.time-table-list-block-heading {
+	color: var(--color-esstu-cyan);
+	font-size: var(--font-size-content-big);
+	font-weight: 700;
+	margin-left: 10px;
+}
+
+.time-table-list-block p {
+	color: var(--color-black);
+	font-size: var(--font-size-content);
+	margin-left: 10px;
+}
+
+.time-table-list {
+	margin-top: 8px;
+}
+
+.time-table-list li {
+	list-style-type: none;
+	margin-bottom: 1px;
+}
+
+.time-table-list li span {
+	cursor: pointer;
+	display: block;
+	padding: 3px 10px;
+	border-radius: 3px;
+	color: var(--color-esstu-cyan);
+	font-size: var(--font-size-content);
+	transition: 100ms;
+}
+
+.time-table-list li span:hover {
+	background: var(--color-esstu-cyan-light-e);
+}
+
+.time-table-list li span:active {
+	background: var(--color-esstu-cyan-light-d);
+}
+
+.time-table-list > li > ul {
+	display: none;
+	margin: 2px 0 5px 15px;
+	padding-left: 2px;
+	border-left: 2px solid var(--color-esstu-cyan-grey);
+}
+
+.time-table-list > li.opened ul {
+	display: block;
+}
+
+/* --------------------------------------- Окно заметок и доп. информации --------------------------------- */
+.campus-img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.time-table-editor {
+	padding: 25px;
+}
+
+.time-n-control-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* ------------------------- Время -------------------------- */
+.time-table-editor_time-block {
+	display: flex;
+	align-items: center;
+}
+
+.time-table-editor_time-block .number {
+	display: flex;
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+	border-radius: 50%;
+	background: var(--color-esstu-cyan-light-c);
+}
+
+.time-table-editor_time-block .number span {
+	margin: auto;
+	color: var(--color-gray-5);
+	font-size: var(--font-size-content);
+	font-weight: 700;
+}
+
+.time-table-editor_time-block .time span {
+	color: var(--color-gray-5);
+	font-size: var(--font-size-content);
+}
+
+.time-table-editor_time-block .time span:last-child:before {
+	content: " - ";
+}
+
+/* ------------------------- Кнопки управления -------------------------- */
+.time-table-editor_control-block {
+	display: flex;
+}
+
+.time-table-editor_control-btn {
+	cursor: pointer;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	margin-left: 5px;
+	border-radius: 50%;
+	background: var(--color-esstu-cyan-light-d);
+}
+
+.time-table-editor_control-btn svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 18px;
+}
+
+.time-table-editor_control-btn svg path {
+	fill: var(--color-esstu-cyan);
+}
+
+.time-table-editor_control-btn:active{
+	background: var(--color-esstu-cyan-light-c);
+}
+
+/* ------------------------- Поля пары -------------------------- */
+.couple-wrapper {
+	display: flex;
+	margin-top: 25px;
+	justify-content: space-between;
+}
+
+.couple-field-heading {
+	display: block;
+	margin-bottom: 5px;
+	color: var(--color-esstu-cyan);
+	font-size: var(--font-size-content-big);
+	font-weight: 700;
+}
+
+.couple-field-val {
+	color: var(--color-gray-5);
+	font-size: var(--font-size-content);
+}
+
+a.couple-field-val {
+	color: var(--color-esstu-cyan);
+}
+
+a.couple-field-val:hover {
+	text-decoration: none;
+}
+
+/* ------------------------- Поле замметок -------------------------- */
+.time-table-editor_textarea:focus {
+	outline: none;
+	border-color: var(--color-esstu-cyan);
+}
+
+.time-table-editor_textarea {
+	width: 100%;
+	height: 200px;
+	resize: none;
+	box-sizing: border-box;
+	margin-top: 25px;
+	padding: 10px 15px;
+	outline: none;
+	border-radius: 5px;
+	color: var(--color-esstu-cyan-dark);
+	border: 2px solid var(--color-esstu-cyan-light-c)
+}
+
+.time-table-editor_textarea::placeholder {
+	color: var(--color-esstu-cyan-grey);
+	opacity: 0.8;
+}
+
+.time-table-editor_textarea:focus::placeholder {
+	opacity: 1;
+}
+
+/* ----------------------------------------- Адаптация ---------------------------------------- */
+
+/* Небольшие мониторы */
+@media only screen and (max-width: 1460px) {
+
+}
+
+@media only screen and (max-width: 1245px) {
+
+}
+
+/* Планшеты и телефоны */
+@media only screen and (max-width: 900px) {
+
+}
+
+@media only screen and (max-width: 420px) {
+
+}

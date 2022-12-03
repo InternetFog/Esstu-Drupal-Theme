@@ -1,0 +1,12 @@
+<?php
+
+function esstu_core_theme($existing, $type, $theme, $path){
+    return[
+        'banner' => [
+            'variables' => []
+        ],
+        'control-navigation' => [
+            'variables' => []
+        ],
+    ];
+}

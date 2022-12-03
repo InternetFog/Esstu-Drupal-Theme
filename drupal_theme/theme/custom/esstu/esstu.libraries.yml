@@ -1,0 +1,11 @@
+global:
+  css:
+    base:
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" : {external: true}
+      assets/css/main.css: {}
+    component:
+      assets/css/footer.css: {}
+      assets/css/header.css: {}
+      assets/css/modile.css: {}
+      assets/css/root.css: {}
+      assets/css/time-table.css: {}

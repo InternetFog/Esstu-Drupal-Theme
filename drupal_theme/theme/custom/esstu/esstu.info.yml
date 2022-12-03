@@ -1,0 +1,17 @@
+name: 'Esstu'
+type: theme
+description: 'Esstu theme'
+core_version_requirement: ^8 || ^9
+base theme: false
+
+libraries:
+  - esstu/global
+
+regions:
+  header: 'Header'
+  control: 'Control'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  footer: 'Footer'
