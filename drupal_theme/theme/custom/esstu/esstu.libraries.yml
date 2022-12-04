@@ -9,3 +9,8 @@ global:
       assets/css/modile.css: {}
       assets/css/root.css: {}
       assets/css/time-table.css: {}
+  js:
+    assets/scripts/nav-main.js: {}
+    assets/scripts/slider-main.js: {}
+    assets/scripts/carousel.js: {}
+    assets/scripts/time-table/windows.js: {}

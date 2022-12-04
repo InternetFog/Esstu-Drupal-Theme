@@ -14,11 +14,11 @@ const mainControlViewBtns = document.querySelectorAll(".main-panel-btn.is-menu")
 for (let i = 0; i < mainControlViewBtns.length; i++) {
 	mainControlViewBtns[i].addEventListener("click", function() {
 		let mainControlPanel = document.querySelector(".main-control-panel");
-		mainControlPanel.classList.toggle("hidden");
-		mainControlPanel.classList.toggle("shown");
+		mainControlPanel.classList.toggle("esstu-hidden");
+		mainControlPanel.classList.toggle("esstu-shown");
 		let mainNavMenu = document.querySelector(".main-navigation");
-		mainNavMenu.classList.toggle("mobile-hidden");
-		mainNavMenu.classList.toggle("mobile-shown");
+		mainNavMenu.classList.toggle("mobile-esstu-hidden");
+		mainNavMenu.classList.toggle("mobile-esstu-shown");
 		document.querySelector(".main-panel-lang-btn-block").classList.remove("opened");
 	});
 }
