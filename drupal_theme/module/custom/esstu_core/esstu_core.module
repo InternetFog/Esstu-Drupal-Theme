@@ -8,5 +8,13 @@ function esstu_core_theme($existing, $type, $theme, $path){
         'control-navigation' => [
             'variables' => []
         ],
+
+        'pinned-sections' => [
+            'variables' => []
+        ],
+
+        'footer' => [
+            'variables' => []
+        ],
     ];
 }
