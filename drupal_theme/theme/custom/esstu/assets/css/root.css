@@ -57,7 +57,9 @@ body {
 	overflow-x: hidden;
 }
 
-
+:root .toolbar-horizontal .toolbar-tray {
+	position: static !important;
+}
 
 /* ----------------------------------------- Адаптация ---------------------------------------- */
 
