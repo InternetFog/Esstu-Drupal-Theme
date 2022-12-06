@@ -9,5 +9,12 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
      {{ page.content }}
   </main>
-  {{ page.footer }}
+  <footer class="site-footer">
+      <div class="site-footer_container">
+        {{ page.footer_first }}
+        {{ page.footer_second }}
+        {{ page.footer_third }}
+      </div>
+  </footer>
+
 </div>
