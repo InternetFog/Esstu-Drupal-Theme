@@ -6,8 +6,17 @@
   {{ page.highlighted }}
   {{ page.help }}
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+
+    <a id="main-content" tabindex="-1"></a> {# link is in html.html.twig #}
      {{ page.content }}
+
+    <div id="pinned-sections-wrapper">
+      <a href="#" class="publications-type-heading"><h2>Закреплённое</h2></a>
+      <div id="pinned-sections-block">
+        {{ page.pinned_sections_wrapper}}
+      </div>
+    </div>
   </main>
   <footer class="site-footer">
       <div class="site-footer_container">
