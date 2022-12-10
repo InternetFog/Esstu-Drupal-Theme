@@ -8,12 +8,29 @@ function esstu_core_theme($existing, $type, $theme, $path){
         'control-navigation' => [
             'variables' => []
         ],
-
+        'main-slider-background' => [
+            'variables' => []
+        ],
+        'pinned-sections-title' => [
+            'variables' => []
+        ],
         'pinned-sections' => [
             'variables' => []
         ],
-
+        'publication-cards-first-title' => [
+            'variables' => []
+        ],
+        'publication-cards-second-title' => [
+            'variables' => []
+        ],
+        'publication-cards-third-title' => [
+            'variables' => []
+        ],
         'footer' => [
+            'variables' => []
+        ],
+        
+        'social-networks' => [
             'variables' => []
         ],
     ];

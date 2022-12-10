@@ -7,23 +7,53 @@
   {{ page.help }}
   <main role="main">
 
+    <div id="main_slider_wrapper">
+      {{ page.main_slider_wrapper}}
+      <div id="main_slider">
+        {{ page.main_slider}}
+      </div>
+    </div>
+    <div class="publication-cards-wrapper">
+      <div id="publication_cards_first">
+        {{ page.publication_cards_first}}
+        <div id="publication-cards-block">
+          {{ page.publication_cards_block_first}}
+        </div>
+      </div>
+      <div id="publication_cards_second">
+      {{ page.publication_cards_second}}
+        <div id="publication-cards-block">
+          {{ page.publication_cards_block_second}}
+        </div>
+      </div>
+      <div id="publication_cards_third">
+      {{ page.publication_cards_third}}
+        <div id="publication-cards-block">
+          {{ page.publication_cards_block_third}}
+        </div>
+      </div>
+    </div>
 
     <a id="main-content" tabindex="-1"></a> {# link is in html.html.twig #}
      {{ page.content }}
 
     <div id="pinned-sections-wrapper">
-      <a href="#" class="publications-type-heading"><h2>Закреплённое</h2></a>
       <div id="pinned-sections-block">
         {{ page.pinned_sections_wrapper}}
       </div>
     </div>
   </main>
   <footer class="site-footer">
-      <div class="site-footer_container">
-        {{ page.footer_first }}
-        {{ page.footer_second }}
-        {{ page.footer_third }}
+      <div class="site-footer-container">
+        <div class="site-footer-first-container">
+          {{ page.footer_first }}
+        </div>
+        <div class="site-footer-second-container">
+          {{ page.footer_second }}
+        </div>
+        <div class="site-footer-third-container">
+          {{ page.footer_third }}
+        </div>
       </div>
   </footer>
-
 </div>
