@@ -1,7 +1,8 @@
 // Открытие вложенных элементов главного меню (использует tabindex="-1")
-const mainNavItems = document.querySelectorAll(".main-navigation > ul > li");
+const mainNavItems = document.querySelectorAll("#block-esstu-main-menu ul > li");
 for (let i = 0; i < mainNavItems.length; i++) {
 	mainNavItems[i].addEventListener("click", function() { // Открытие при нажатии
+		this.setAttribute("tabindex", "-1");
 		this.focus();
 	});
 	mainNavItems[i].addEventListener("mouseleave", function() { // Сокрытие при выведении курсора
@@ -16,9 +17,8 @@ for (let i = 0; i < mainControlViewBtns.length; i++) {
 		let mainControlPanel = document.querySelector(".main-control-panel");
 		mainControlPanel.classList.toggle("esstu-hidden");
 		mainControlPanel.classList.toggle("esstu-shown");
-		let mainNavMenu = document.querySelector(".main-navigation");
-		mainNavMenu.classList.toggle("mobile-esstu-hidden");
-		mainNavMenu.classList.toggle("mobile-esstu-shown");
+		let mainNavMenu = document.querySelector("#block-esstu-main-menu");
+		mainNavMenu.classList.toggle("esstu-mobile-shown");
 		document.querySelector(".main-panel-lang-btn-block").classList.remove("opened");
 	});
 }

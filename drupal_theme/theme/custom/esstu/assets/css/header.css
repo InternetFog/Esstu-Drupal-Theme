@@ -525,7 +525,7 @@
 		transition: 0.4s;
 	}
 
-	#block-esstu-main-menu.esstu-mobile-hidden {
+	#block-esstu-main-menu:not(.esstu-mobile-shown) {
 		transform: translateY(calc(100%));
 	}
 
@@ -580,6 +580,10 @@
 	.main-panel-btns,
 	#block-esstu-main-menu-btns {
 		display: flex;
+	}
+
+	.main-navigation-btns {
+		display: contents;
 	}
 
 	.main-panel-btns {
