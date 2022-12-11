@@ -14,4 +14,15 @@ regions:
   highlighted: Highlighted
   help: Help
   content: Content
-  footer: 'Footer'
+  main_slider_wrapper: 'Main slider wrapper' 
+  main_slider: 'Main slider'
+  publication_cards_first: 'Publication cards first' 
+  publication_cards_block_first: 'Publication cards block first'
+  publication_cards_second: 'Publication cards second' 
+  publication_cards_block_second: 'Publication cards block second'
+  publication_cards_third: 'Publication cards third' 
+  publication_cards_block_third: 'Publication cards block third'
+  pinned_sections_wrapper: 'Pinned sections'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
